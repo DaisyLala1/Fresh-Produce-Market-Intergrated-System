@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fresh Produce Market – POS &amp; Consignment System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<aside class="sidebar no-print" id="sidebar">
+  <a class="brand" href="#/dashboard">
+    <i class="bi bi-flower1"></i>
+    <span><strong>Fresh Produce<br>Market</strong><small>POS &amp; Consignment System</small></span>
+  </a>
+  <nav id="nav">
+    <a href="#/dashboard" data-route="dashboard"><i class="bi bi-house-door"></i>Dashboard</a>
+    <a href="#/farmers" data-route="farmers"><i class="bi bi-people"></i>Farmers</a>
+    <a href="#/consignments" data-route="consignments"><i class="bi bi-box-seam"></i>Consignments</a>
+    <a href="#/pos" data-route="pos"><i class="bi bi-cart3"></i>POS Sales</a>
+    <a href="#/inventory" data-route="inventory"><i class="bi bi-boxes"></i>Inventory</a>
+    <a href="#/products" data-route="products"><i class="bi bi-tag"></i>Products</a>
+    <a href="#/commissions" data-route="commissions"><i class="bi bi-percent"></i>Commissions</a>
+    <a href="#/forecasting" data-route="forecasting"><i class="bi bi-graph-up-arrow"></i>Forecasting</a>
+    <a href="#/reports" data-route="reports"><i class="bi bi-file-earmark-bar-graph"></i>Reports</a>
+    <a href="#/users" data-route="users" data-admin-only class="d-none"><i class="bi bi-person-gear"></i>Users</a>
+  </nav>
+  <div class="bottom">
+    <a href="#" id="logoutLink"><i class="bi bi-box-arrow-left"></i>Logout</a>
+  </div>
+</aside>
+
+<div class="main">
+  <header class="topbar no-print">
+    <button class="btn btn-light d-lg-none" id="menuBtn" aria-label="Menu"><i class="bi bi-list"></i></button>
+    <form class="search flex-grow-1" id="globalSearch" role="search">
+      <div class="input-group input-group-sm">
+        <span class="input-group-text bg-light border-end-0"><i class="bi bi-search"></i></span>
+        <input class="form-control bg-light border-start-0" id="globalSearchInput"
+               placeholder="Search consignment reference, e.g. CON-2026-00001" aria-label="Search consignment">
+      </div>
+    </form>
+    <div class="ms-auto d-flex align-items-center gap-2">
+      <i class="bi bi-person-circle fs-3 text-fp"></i>
+      <div class="lh-sm d-none d-sm-block">
+        <div class="fw-semibold small" id="userName">…</div>
+        <div class="text-muted" style="font-size:.72rem" id="userRole"></div>
+      </div>
+    </div>
+  </header>
+  <main class="content" id="view">
+    <div class="text-center text-muted py-5"><div class="spinner-border spinner-border-sm text-success"></div></div>
+  </main>
+</div>
+
+<script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="vendor/chartjs/chart.umd.min.js"></script>
+<script src="js/core.js"></script>
+<script src="js/pages/dashboard.js"></script>
+<script src="js/pages/farmers.js"></script>
+<script src="js/pages/consignments.js"></script>
+<script src="js/pages/pos.js"></script>
+<script src="js/pages/inventory.js"></script>
+<script src="js/pages/products.js"></script>
+<script src="js/pages/commissions.js"></script>
+<script src="js/pages/forecasting.js"></script>
+<script src="js/pages/reports.js"></script>
+<script src="js/pages/users.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
